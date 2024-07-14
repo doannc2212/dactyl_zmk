@@ -1,23 +1,22 @@
-if SHIELD_DACTYL_MANUFORM_LEFT
+if SHIELD_DACTYL_MANUFORM_DONGLE
 
-    config ZMK_KEYBOARD_NAME
-        default "Dactyl (Left)"
+config ZMK_KEYBOARD_NAME
+	default "Dactyl Dongle"
 
-    config ZMK_SPLIT_BLE_ROLE_CENTRAL
-        default y
-
-endif
-
-if SHIELD_DACTYL_MANUFORM_RIGHT
-
-    config ZMK_KEYBOARD_NAME
-        default "Dactyl (Right)"
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+	default y
+	
+config ZMK_USB
+	default y
 
 endif
 
-if SHIELD_DACTYL_MANUFORM_LEFT || SHIELD_DACTYL_MANUFORM_RIGHT
+if SHIELD_DACTYL_MANUFORM_LEFT || SHIELD_DACTYL_MANUFORM_RIGHT || SHIELD_DACTYL_MANUFORM_DONGLE 
 
-    config ZMK_SPLIT
-        default y
+config ZMK_SPLIT
+	default y
 
+config ZMK_BLE
+	default y
+	
 endif
