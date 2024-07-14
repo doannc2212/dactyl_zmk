@@ -1,7 +1,7 @@
 if SHIELD_DACTYL_MANUFORM_DONGLE
 
 config ZMK_KEYBOARD_NAME
-	default "Dactyl Dongle"
+	default "Dactyl"
 
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
 	default y
