@@ -1,0 +1,11 @@
+file_format: "1"
+id: dactyl_manuform
+name: Dactyl_manuform
+type: shield
+url: https://github.com/doannc2212/dactyl_zmk.git
+requires: [nice_nano_v2]
+features:
+  - keys
+siblings:
+  - dactyl_manuform_left
+  - dactyl_manuform_right
