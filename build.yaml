@@ -21,3 +21,7 @@ include:
     shield: dactyl_manuform_right
   - board: nice_nano_v2
     shield: settings_reset
+  - board: nice_nano_v2
+    shield: dactyl_manuform_dongle
+    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+    artifact-name: dactyl_manuform_dongle_with_logging
