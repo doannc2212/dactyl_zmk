@@ -4,6 +4,95 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        left_bkt {
+            bindings = <&kp LBKT>;
+            key-positions = <3 2>;
+            timeout-ms = <50>;
+        };
+
+        right_bkt {
+            bindings = <&kp RBKT>;
+            key-positions = <6 7>;
+            timeout-ms = <50>;
+        };
+
+        left_par {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <12 13>;
+            timeout-ms = <50>;
+        };
+
+        right_par {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <16 17>;
+            timeout-ms = <50>;
+        };
+
+        left_brace {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <23 22>;
+            timeout-ms = <50>;
+        };
+
+        right_brace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <26 27>;
+            timeout-ms = <50>;
+        };
+
+        bac {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <4 5>;
+        };
+
+        pipe {
+            bindings = <&kp PIPE>;
+            key-positions = <14 15>;
+        };
+    };
+
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+
+            quick-tap-ms = <180>;
+            global-quick-tap;
+        };
+
+        ltq: ltq {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LTQ";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "hold-preferred";
+            bindings = <&mo>, <&kp>;
+
+            quick-tap-ms = <180>;
+            global-quick-tap;
+        };
+
+        as: as {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AUTO_SHIFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <135>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+        };
+    };
+    
     keymap {
         compatible = "zmk,keymap";
 
