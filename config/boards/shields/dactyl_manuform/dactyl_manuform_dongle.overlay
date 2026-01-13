@@ -5,6 +5,14 @@
         zmk,kscan = &mock_kscan;
         zmk,matrix-transform = &default_transform;
         zephyr,display = &oled;
+        zmk,studio-unlock-on-start;
+    };
+
+    behaviors {
+        studio_unlock: studio_unlock {
+            compatible = "zmk,behavior-studio-unlock";
+            #binding-cells = <0>;
+        };
     };
 
     default_transform: keymap_transform_0 {

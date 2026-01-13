@@ -6,6 +6,14 @@
         zmk,matrix_transform = &default_transform;
         zmk,physical-layout = &physical_layout0;
         zephyr,display = &oled;
+        zmk,studio-unlock-on-start;
+    };
+
+    behaviors {
+        studio_unlock: studio_unlock {
+            compatible = "zmk,behavior-studio-unlock";
+            #binding-cells = <0>;
+        };
     };
 
     default_transform: keymap_transform_0 {
