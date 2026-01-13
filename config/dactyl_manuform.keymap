@@ -8,6 +8,12 @@
     combos {
         compatible = "zmk,combos";
 
+        studio_unlock {
+            bindings = <&studio_unlock>;
+            key-positions = <0 1>;
+            timeout-ms = <50>;
+        };
+
         left_bkt {
             bindings = <&kp LBKT>;
             key-positions = <3 2>;
@@ -114,7 +120,7 @@
             bindings = <
                 &kp F12 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                &kp F6 &kp F7   &kp F8   &kp F9 &kp F10   &kp F11
                 &trans  &trans &trans &trans &trans &trans                &trans &trans   &trans   &trans &trans    &trans
-                &trans  &trans &trans &trans &trans &trans                &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans 
+                &studio_unlock  &trans &trans &trans &trans &trans        &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans 
                 &trans  &trans &trans &trans &trans &trans                &trans &trans   &trans   &trans &trans    &mo 3
                                &trans &trans                                              &trans   &trans
                                              &trans &trans                &trans &trans

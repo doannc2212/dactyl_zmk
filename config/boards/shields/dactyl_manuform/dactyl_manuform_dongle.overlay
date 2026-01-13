@@ -5,7 +5,6 @@
         zmk,kscan = &mock_kscan;
         zmk,matrix-transform = &default_transform;
         zephyr,display = &oled;
-        zmk,studio-unlock-on-start;
     };
 
     behaviors {
